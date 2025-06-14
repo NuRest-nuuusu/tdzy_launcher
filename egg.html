@@ -35,11 +35,12 @@
     }
 
     #placeholder-pc {
-      background-image: url('');
+      background-image: url('./media/tdzy_launcher_egg_pc_06141519.png');
+      display: none;
     }
 
     #placeholder-mobile {
-      background-image: url('');
+      background-image: url('./tdzy_launcher_egg_pc_06141519.png');
       display: none;
     }
 
@@ -80,29 +81,29 @@
     }
 
     .button {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%) scale(0.9);
-  padding: 12px 28px;
-  font-size: 16px;
-  border-radius: 24px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: white;
-  text-decoration: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  opacity: 0;
-  animation: floatIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  z-index: 1;
-}
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%) scale(0.9);
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 24px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: white;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      opacity: 0;
+      animation: floatIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      z-index: 1;
+    }
 
-.button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.6);
-}
+    .button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
 
     @keyframes floatIn {
   0% {
@@ -144,12 +145,12 @@
     <div id="placeholder-mobile"></div>
 
     <video id="video-background-pc" autoplay loop muted playsinline>
-      <source src="tdzy_launcher_egg_video_pc_06141519.mp4" type="video/mp4">
+      <source src="./media/tdzy_launcher_egg_video_pc_06141519.mp4" type="video/mp4">
       <source src="-" type="video/webm">
     </video>
 
     <video id="video-background-mobile" autoplay loop muted playsinline>
-      <source src="tdzy_launcher_egg_video_mobile_06141519.mp4" type="video/mp4"> 
+      <source src="./media/tdzy_launcher_egg_video_mobile_06141519.mp4" type="video/mp4"> 
     </video>
   </div>
 
