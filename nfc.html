@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>破碎梦境启动器</title>
+</head>
+<body>
+  <script>
+    (() => {
+      const links = [
+        { url: "https://www.bilibili.com/video/av745185122", weight: 1 },//好了现在可以哭了
+        { url: "https://www.bilibili.com/video/av1550223472", weight: 1},//十七岁前想做的事除了〇〇一时竟无可想起
+        { url: "https://www.bilibili.com/video/av871757907", weight: 1 },//上海今夜不会疼我
+        { url: "https://www.bilibili.com/video/av359951745", weight: 1 },//所以我登上了天台
+        { url: "https://www.bilibili.com/video/av702068778", weight: 1 },//人造透明和天界线
+        { url: "https://www.bilibili.com/video/av1005049300", weight: 1 },//可是身体未曾忘记
+        { url: "https://www.bilibili.com/video/av1051057694", weight: 1 },//行为矫正ROCK！！
+        { url: "https://www.bilibili.com/video/av1200549943", weight: 1.2},//凌晨四时 零下四度
+        { url: "https://www.bilibili.com/video/av1406015641", weight: 1},//只有创伤不会欺骗
+        { url: "https://www.bilibili.com/video/av114645343995222", weight: 1.2 },//为六弦琴而作
+        { url: "https://www.bilibili.com/video/av114277067261616", weight: 1},//我 是，女 孩 。
+        { url: "https://www.bilibili.com/video/av113926473779744", weight: 1},//你的眼泪同你一样廉价
+        { url: "https://www.bilibili.com/video/av113410809266910", weight: 1},//但我讨厌摇滚乐
+        { url: "https://www.bilibili.com/video/av113237467074611", weight: 0.5 },//拾光沉夜
+        { url: "https://www.bilibili.com/video/av1206328352", weight: 1 },//8月15日、幽霊の夏
+        { url: "https://www.bilibili.com/video/av779056628", weight: 0.5 },//去死去死冷酷仙境
+        { url: "https://www.bilibili.com/video/av1005316258", weight: 0.5 },//如果能被夜晚所原谅的话
+        { url: "https://www.bilibili.com/video/av114319765280930", weight: 0.5 },//可是夏还没有结束
+        { url: "https://www.bilibili.com/video/av528887343", weight: 0.5},//我的高中生活果然有问题～
+        { url: "https://y.music.163.com/m/song?id=1974766110", weight: 0.5 },//バイバイバイ文化财
+        { url: "https://www.bilibili.com/audio/au3726484", weight: 0.5 },//ボカロなんてね
+        { url: "https://y.music.163.com/m/song?id=1977964380", weight: 0.5 },//失敗販売
+        { url: "egg.html", weight: 5 }//代码出逃
+      ];
+
+      //计算权重
+      let totalWeight = 0;
+      links.forEach(link => totalWeight += link.weight);
+
+      //生成随机数选择链接
+      const randomNum = Math.random() * totalWeight;
+      let selectedLink = null;
+      let cumulativeWeight = 0;
+      for (const link of links) {
+        cumulativeWeight += link.weight;
+        if (randomNum < cumulativeWeight) {
+          selectedLink = link;
+          break;
+        }
+      }
+
+      //跳转
+      window.location.href = selectedLink.url;
+    })();
+  </script>
+
+  <noscript>
+    <style>
+      #overlay { display: none !important; }
+    </style>
+    <div>请启用 JavaScript 以进入破碎梦境。</div>
+  </noscript>
+</body>
+</html>
